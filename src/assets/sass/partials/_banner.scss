@@ -1,0 +1,44 @@
+/* ======================  Banner Section Start  ======================*/
+.banner {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 115px;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        opacity: 0.7;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 180px;
+    }
+
+    &__image {
+        max-width: 400px;
+    }
+}
+
+.seo-text {
+    font-size: 200px;
+}
+
+/* ======================  Banner Section End  ======================*/

@@ -1,0 +1,324 @@
+@@include('../partials/_template-top.html')
+
+<main>
+  <section class="dashboard">
+    @@include('../components/_dashboard-sidebar.html')
+
+    <div class="dashboard-content">
+      @@include('../components/_dashboard-header.html')
+
+      <div class="dashboard-body">
+        <div class="dashboard-welcome">
+          <div class="dashboard-welcome__content">
+            <span class="dashboard-welcome__subtitle">Loan Dashboard</span>
+            <h1 class="dashboard-welcome__title">Welcome back, John</h1>
+            <p class="dashboard-welcome__text">
+              Track your loan applications, deposits, repayments, and support
+              activity from one focused workspace.
+            </p>
+          </div>
+          <div class="dashboard-welcome__actions">
+            <a class="dashboard-btn dashboard-btn--light" href="#"
+              ><i class="fa-solid fa-plus"></i> Apply Loan</a
+            >
+            <a class="dashboard-btn dashboard-btn--white" href="#"
+              ><i class="fa-solid fa-wallet"></i> Deposit</a
+            >
+          </div>
+        </div>
+
+        <div class="dashboard-summary">
+          <div class="dashboard-summary__card">
+            <span class="dashboard-summary__icon dashboard-summary__icon--base"
+              ><i class="fa-solid fa-wallet"></i
+            ></span>
+            <span class="dashboard-summary__label">Available Balance</span>
+            <div class="h3 dashboard-summary__value">$12,540.00</div>
+            <p class="dashboard-summary__meta dashboard-summary__meta--up">
+              <i class="fa-solid fa-arrow-trend-up"></i> 18.5% this month
+            </p>
+          </div>
+          <div class="dashboard-summary__card">
+            <span class="dashboard-summary__icon dashboard-summary__icon--green"
+              ><i class="fa-solid fa-building-columns"></i
+            ></span>
+            <span class="dashboard-summary__label">Active Loan</span>
+            <div class="h3 dashboard-summary__value">$15,000.00</div>
+            <p class="dashboard-summary__meta">3 running loans</p>
+          </div>
+          <div class="dashboard-summary__card">
+            <span
+              class="dashboard-summary__icon dashboard-summary__icon--orange"
+              ><i class="fa-solid fa-calendar-check"></i
+            ></span>
+            <span class="dashboard-summary__label">Next Installment</span>
+            <div class="h3 dashboard-summary__value">$500.00</div>
+            <p class="dashboard-summary__meta">Due on 15 May</p>
+          </div>
+          <div class="dashboard-summary__card">
+            <span class="dashboard-summary__icon dashboard-summary__icon--blue"
+              ><i class="fa-solid fa-headset"></i
+            ></span>
+            <span class="dashboard-summary__label">Support Tickets</span>
+            <div class="h3 dashboard-summary__value">02</div>
+            <p class="dashboard-summary__meta">1 ticket pending</p>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="dashboard-panel dashboard-panel--overview">
+              <div class="dashboard-panel__header">
+                <div>
+                  <span class="dashboard-panel__subtitle">Overview</span>
+                  <h4 class="dashboard-panel__title">Account Overview</h4>
+                </div>
+              </div>
+              <div class="dashboard-overview">
+                <div class="dashboard-overview__item">
+                  <span
+                    class="dashboard-overview__icon dashboard-overview__icon--base"
+                    ><i class="fa-solid fa-piggy-bank"></i
+                  ></span>
+                  <div class="dashboard-overview__content">
+                    <span class="dashboard-overview__label"
+                      >Total Deposits</span
+                    >
+                    <h5 class="dashboard-overview__value">$12,500.00</h5>
+                  </div>
+                  <span
+                    class="dashboard-overview__badge dashboard-overview__badge--up"
+                    >+18.5%</span
+                  >
+                </div>
+                <div class="dashboard-overview__item">
+                  <span
+                    class="dashboard-overview__icon dashboard-overview__icon--green"
+                    ><i class="fa-solid fa-arrow-trend-up"></i
+                  ></span>
+                  <div class="dashboard-overview__content">
+                    <span class="dashboard-overview__label"
+                      >Monthly Profit</span
+                    >
+                    <h5 class="dashboard-overview__value">$2,350.00</h5>
+                  </div>
+                  <span
+                    class="dashboard-overview__badge dashboard-overview__badge--up"
+                    >+25.1%</span
+                  >
+                </div>
+                <div class="dashboard-overview__item">
+                  <span
+                    class="dashboard-overview__icon dashboard-overview__icon--orange"
+                    ><i class="fa-solid fa-arrow-up-from-bracket"></i
+                  ></span>
+                  <div class="dashboard-overview__content">
+                    <span class="dashboard-overview__label"
+                      >Total Withdraw</span
+                    >
+                    <h5 class="dashboard-overview__value">$4,750.00</h5>
+                  </div>
+                  <span class="dashboard-overview__badge">12.4%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="dashboard-panel dashboard-panel--status">
+              <div class="dashboard-panel__header">
+                <div>
+                  <span class="dashboard-panel__subtitle">Status</span>
+                  <h4 class="dashboard-panel__title">Loan Progress</h4>
+                </div>
+              </div>
+              <div class="dashboard-progress">
+                <div class="dashboard-progress__circle">
+                  <span class="dashboard-progress__number">72%</span>
+                  <span class="dashboard-progress__text">Paid</span>
+                </div>
+                <div class="dashboard-progress__list">
+                  <p class="dashboard-progress__item">
+                    <span
+                      class="dashboard-progress__dot dashboard-progress__dot--base"
+                    ></span>
+                    Paid Amount <strong>$10,800</strong>
+                  </p>
+                  <p class="dashboard-progress__item">
+                    <span
+                      class="dashboard-progress__dot dashboard-progress__dot--green"
+                    ></span>
+                    Remaining <strong>$4,200</strong>
+                  </p>
+                  <p class="dashboard-progress__item">
+                    <span
+                      class="dashboard-progress__dot dashboard-progress__dot--orange"
+                    ></span>
+                    Next Due <strong>$500</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="dashboard-panel dashboard-panel--activity">
+              <div class="dashboard-panel__header">
+                <div>
+                  <span class="dashboard-panel__subtitle">Today</span>
+                  <h4 class="dashboard-panel__title">Recent Activity</h4>
+                </div>
+              </div>
+              <div class="dashboard-activity">
+                <div class="dashboard-activity__item">
+                  <span
+                    class="dashboard-activity__icon dashboard-activity__icon--green"
+                    ><i class="fa-solid fa-arrow-down"></i
+                  ></span>
+                  <div class="dashboard-activity__content">
+                    <h5 class="h6 dashboard-activity__title">
+                      Deposit completed <span>+$500.00</span>
+                    </h5>
+                    <p class="dashboard-activity__time">Today, 10:30 AM</p>
+                  </div>
+                </div>
+                <div class="dashboard-activity__item">
+                  <span
+                    class="dashboard-activity__icon dashboard-activity__icon--orange"
+                    ><i class="fa-solid fa-arrow-up"></i
+                  ></span>
+                  <div class="dashboard-activity__content">
+                    <h5 class="h6 dashboard-activity__title">
+                      Withdraw request <span>-$100.00</span>
+                    </h5>
+                    <p class="dashboard-activity__time">Yesterday, 04:20 PM</p>
+                  </div>
+                </div>
+                <div class="dashboard-activity__item">
+                  <span
+                    class="dashboard-activity__icon dashboard-activity__icon--base"
+                    ><i class="fa-solid fa-building-columns"></i
+                  ></span>
+                  <div class="dashboard-activity__content">
+                    <h5 class="h6 dashboard-activity__title">
+                      Loan approved <span>+$10,000</span>
+                    </h5>
+                    <p class="dashboard-activity__time">2 days ago</p>
+                  </div>
+                </div>
+                <a class="dashboard-link" href="#"
+                  >View all activity <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="dashboard-panel dashboard-panel--table">
+              <div class="dashboard-panel__header">
+                <div>
+                  <span class="dashboard-panel__subtitle">Loans</span>
+                  <h4 class="dashboard-panel__title">Running Loan Plans</h4>
+                </div>
+                <a class="dashboard-link dashboard-link--inline" href="#"
+                  >View all <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+              <div class="dashboard-table-wrap">
+                <table class="dashboard-table">
+                  <thead>
+                    <tr>
+                      <th>Loan ID</th>
+                      <th>Plan</th>
+                      <th>Amount</th>
+                      <th>Interest</th>
+                      <th>Next Date</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Loan ID">LN-2024-001</td>
+                      <td data-label="Plan">Personal Loan</td>
+                      <td data-label="Amount">$5,000.00</td>
+                      <td data-label="Interest">10.5%</td>
+                      <td data-label="Next Date">15 May 2024</td>
+                      <td data-label="Status">
+                        <span class="dashboard-status">Running</span>
+                      </td>
+                      <td data-label="Action">
+                        <a class="dashboard-table__action" href="#"
+                          ><i class="fa-regular fa-eye"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Loan ID">LN-2024-002</td>
+                      <td data-label="Plan">Business Loan</td>
+                      <td data-label="Amount">$8,000.00</td>
+                      <td data-label="Interest">12.0%</td>
+                      <td data-label="Next Date">20 May 2024</td>
+                      <td data-label="Status">
+                        <span class="dashboard-status">Running</span>
+                      </td>
+                      <td data-label="Action">
+                        <a class="dashboard-table__action" href="#"
+                          ><i class="fa-regular fa-eye"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Loan ID">LN-2024-003</td>
+                      <td data-label="Plan">Education Loan</td>
+                      <td data-label="Amount">$3,000.00</td>
+                      <td data-label="Interest">9.5%</td>
+                      <td data-label="Next Date">25 May 2024</td>
+                      <td data-label="Status">
+                        <span class="dashboard-status">Running</span>
+                      </td>
+                      <td data-label="Action">
+                        <a class="dashboard-table__action" href="#"
+                          ><i class="fa-regular fa-eye"></i
+                        ></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="dashboard-panel dashboard-panel--actions">
+              <div class="dashboard-panel__header">
+                <div>
+                  <span class="dashboard-panel__subtitle">Shortcuts</span>
+                  <h4 class="dashboard-panel__title">Quick Actions</h4>
+                </div>
+              </div>
+              <div class="dashboard-actions">
+                <a class="dashboard-action" href="#"
+                  ><i class="fa-solid fa-building-columns"></i
+                  ><span>Take Loan</span></a
+                >
+                <a class="dashboard-action" href="#"
+                  ><i class="fa-solid fa-wallet"></i><span>Deposit</span></a
+                >
+                <a class="dashboard-action" href="#"
+                  ><i class="fa-solid fa-money-bill-transfer"></i
+                  ><span>Withdraw</span></a
+                >
+                <a class="dashboard-action" href="#"
+                  ><i class="fa-solid fa-shield-halved"></i
+                  ><span>Installment</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('../partials/_template-bottom.html')

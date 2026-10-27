@@ -1,0 +1,209 @@
+/* ======================  Dropdown Section Start  ======================*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    color: hsl(var(--heading-color));
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 40px;
+    padding: 9px 14px;
+    border: 1px solid hsl(var(--black) / .08);
+    border-radius: 100px;
+    background-color: hsl(var(--white));
+   
+    cursor: pointer;
+    user-select: none;
+    transition: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+
+    .language__item,
+    .language__item p {
+        color: inherit;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &[aria-expanded="true"] {
+        color: hsl(var(--base));
+        border-color: hsl(var(--base) / .35);
+        background-color: hsl(var(--base) / .08);
+
+        outline: none;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+}
+
+.dropdown-toggle::after {
+    content: "";
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    margin: -4px 2px 0 1px;
+    border: solid currentColor;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    transition: transform .25s ease, margin .25s ease;
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(225deg);
+    margin-top: 4px;
+}
+
+.dropdown-menu {
+    z-index: 20;
+    min-width: 184px;
+    padding: 8px;
+    font-size: 14px;
+    color: hsl(var(--heading-color));
+    background-color: hsl(var(--white));
+    border: 1px solid hsl(var(--black) / .07);
+    border-radius: 12px;
+    white-space: nowrap;
+ 
+    overflow: visible;
+    margin-top: 10px !important;
+    isolation: isolate;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 22px;
+        width: 12px;
+        height: 12px;
+        background-color: hsl(var(--white));
+        border-top: 1px solid hsl(var(--black) / .07);
+        border-left: 1px solid hsl(var(--black) / .07);
+        transform: rotate(45deg);
+        pointer-events: none;
+    }
+
+    &.show {
+        animation: dropdown-reveal .2s ease both;
+    }
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 9px 12px;
+    font-weight: 500;
+    color: hsl(var(--heading-color));
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.2;
+    transition: color .25s ease, background-color .25s ease, transform .25s ease;
+
+    img {
+        flex: 0 0 auto;
+      
+    }
+
+    p {
+        color: inherit;
+    }
+
+    &:hover,
+    &:focus {
+        color: hsl(var(--base)) !important;
+        background-color: hsl(var(--base) / .1) !important;
+        transform: translateX(2px);
+       
+        outline: none;
+    }
+}
+
+.dropdown-menu li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: hsl(var(--white)) !important;
+    background: linear-gradient(95deg, hsl(var(--base)), hsl(var(--base-two))) !important;
+
+    p {
+        color: inherit !important;
+    }
+}
+
+.header__area .dropdown-toggle {
+    min-height: 42px;
+    padding: 9px 14px;
+    color: hsl(var(--heading-color));
+    border-color: hsl(var(--black) / .08);
+    background: hsl(var(--white) / .92);
+   
+    backdrop-filter: blur(12px);
+
+    &:hover,
+    &:focus-visible,
+    &[aria-expanded="true"] {
+        color: hsl(var(--base));
+        border-color: hsl(var(--base) / .42);
+        background: hsl(var(--white));
+       
+    }
+}
+
+.header__widgets .dropdown-menu {
+    right: 0;
+    left: auto;
+    min-width: 188px;
+    color: hsl(var(--heading-color));
+    background: hsl(var(--white) / .96);
+    border: 1px solid hsl(var(--black) / .08);
+   
+    backdrop-filter: blur(18px);
+
+    &::before {
+        right: 24px;
+        left: auto;
+        background: hsl(var(--white) / .96);
+        border-color: hsl(var(--black) / .08);
+    }
+
+    .dropdown-item {
+        color: hsl(var(--heading-color));
+
+        &:hover,
+        &:focus {
+            color: hsl(var(--base)) !important;
+            background: hsl(var(--base) / .1) !important;
+
+            p {
+                color: inherit !important;
+            }
+        }
+    }
+}
+
+@keyframes dropdown-reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(0 0 100% 0 round 12px);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0 round 12px);
+    }
+}
+
+/* ======================  Dropdown Section End  ======================*/

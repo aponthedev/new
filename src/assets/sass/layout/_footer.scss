@@ -1,0 +1,179 @@
+/* ======================  Footer Section Start  ======================*/
+.footer {
+    background-color: hsl(var(--black));
+
+    > .container {
+        position: relative;
+    }
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   
+
+    &__wrap {
+        border-bottom: 1px solid hsl(var(--white) / 0.3);
+        padding-bottom: 24px;
+    }
+
+    &__row {
+        align-items: stretch;
+    }
+
+    &__left {
+        max-width: 420px;
+        padding-right: 50px;
+    }
+
+    &__logo {
+        display: inline-block;
+        max-width: 190px;
+        margin-bottom: 25px;
+    }
+
+    &__desc {
+        font-size: 18px;
+        color: hsl(var(--white) / 0.8);
+        line-height: 1.75;
+        margin-bottom: 30px;
+    }
+
+    &__social {
+        gap: 18px;
+
+        li a {
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        color: hsl(var(--white));
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &__column {
+        height: 100%;
+        padding-left: 52px;
+        border-inline-start: 1px solid hsl(var(--border-color) / 0.3);
+    }
+
+    &__watermark {
+        position: relative;
+        margin-top: 24px;
+        padding-bottom: 8px;
+        font-family: var(--bodyfont);
+        font-size:  320px;
+        line-height: 0.9;
+        letter-spacing: 4px;
+        text-align: center;
+        color: transparent;
+        font-weight: 700;
+        white-space: nowrap;
+        pointer-events: none;
+        user-select: none;
+        background: linear-gradient(90deg, hsl(var(--white) / 0.05) 0%, hsl(var(--white) / 0.5) 50%, hsl(var(--white) / 0.05) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width: 767px) {
+            margin-top: 32px;
+            padding-bottom: 4px;
+            font-size: 22vw;
+            line-height: 1;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        justify-content: space-between;
+        padding-top: 24px;
+
+        &__text {
+            font-size: 18px;
+            color: hsl(var(--white) / 0.8);
+        }
+
+        &__link {
+            font-size: 18px;
+            color: hsl(var(--white) / 0.8);
+
+            a {
+                font-size: 18px;
+                color: hsl(var(--white) / 0.8);
+                text-decoration: underline;
+                margin-left: 12px;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        font-size: 18px;
+        color: hsl(var(--white) / 0.8);
+        transition: color 0.25s ease, transform 0.25s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset-inline-start: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: hsl(var(--base));
+            transition: width 0.25s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+            color: hsl(var(--base));
+            transform: translateX(4px);
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    &__contact-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 18px;
+        line-height: 1.45;
+        color: hsl(var(--white) / 0.8);
+    }
+
+    &__contact-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        flex: 0 0 52px;
+        border-radius: 13px;
+        font-size: 18px;
+        background-color: hsl(var(--white) / 0.15);
+        color: hsl(var(--white));
+    }
+
+}
+
+/* ======================  Footer Section End  ======================*/

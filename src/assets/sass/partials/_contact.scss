@@ -1,0 +1,97 @@
+/* ======================  Contact Section Start  ======================*/
+.contact {
+
+    &__form{
+        &__subtitle{
+            font-size: 14px;
+            color: hsl(var(--base));
+            letter-spacing: 4px;
+        }
+
+        &__title{
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        &__desc{
+            font-size: 18px;
+            color: hsl(var(--body-color));
+            margin-bottom: 30px;
+        }
+    }
+    &__icon {
+        height: 60px;
+        width: 60px;
+        background-color: hsl(var(--base) / 0.1);
+        color: hsl(var(--base));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+
+        svg {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    &__input {
+        padding: 0 14px;
+        column-gap: 10px;
+        border-radius: 6px;
+
+        &__icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            color: hsl(var(--black));
+
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+
+    }
+
+    &__submit-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 5px 5px 5px 20px;
+        border: 0;
+        border-radius: 999px;
+        background-color: #ff3d17;
+        color: hsl(var(--white));
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+        transition: background-color .3s ease, transform .3s ease;
+
+        &:hover,
+        &:focus-visible {
+            background-color: #e9310e;
+            color: hsl(var(--white));
+            transform: translateY(-1px);
+        }
+
+        &-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            flex: 0 0 38px;
+            border-radius: 50%;
+            background-color: hsl(var(--white));
+            color: #ff3d17;
+            font-size: 14px;
+        }
+    }
+}
+
+/* ======================  Contact Section End  ======================*/

@@ -1,0 +1,220 @@
+/* ====================================== Alert Css Start =============================== */
+.alert {
+    position: relative;
+    margin-bottom: 0;
+    padding: 22px 24px;
+    border: 1px solid hsl(var(--black)/0.45);
+    border-radius: 18px;
+    background-color: hsl(var(--black)/0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 991px) {
+    .alert {
+        padding: 18px 20px;
+        gap: 14px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .alert {
+        padding: 16px;
+        gap: 12px;
+        flex-direction: column;
+    }
+}
+
+.alert__icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: hsl(var(--body-color));
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.alert__content {
+    width: calc(100% - 52px);
+    padding-left: 0;
+}
+
+@media screen and (max-width: 575px) {
+    .alert__content {
+        width: 100%;
+    }
+}
+
+.alert__title {
+    margin-bottom: 0px;
+    color: hsl(var(--heading-color));
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.35;
+    font-family: var(--heading-font);
+}
+
+@media screen and (max-width: 991px) {
+    .alert__title {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .alert__title {
+        font-size: 1.125rem;
+    }
+}
+
+.alert__desc {
+    margin-bottom: 0;
+    color: hsl(var(--body-color)/0.75);
+    display: block;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+@media screen and (max-width: 991px) {
+    .alert__desc {
+        font-size: 0.9375rem;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .alert__desc {
+        font-size: 0.875rem;
+        line-height: 1.65;
+    }
+}
+
+.alert__link {
+    position: relative;
+    color: hsl(var(--base));
+    font-weight: 600;
+}
+
+.alert__link:hover {
+    color: hsl(var(--base));
+}
+
+.alert__link:hover::before {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0;
+}
+
+.alert__link::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background-color: hsl(var(--base));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.alert--base {
+    border-color: hsl(var(--base)/0.3);
+    background-color: hsl(var(--base)/0.1);
+}
+
+.alert--base::before {
+    background: linear-gradient(180deg, hsl(var(--base)), hsl(var(--base-two)));
+}
+
+.alert--base .alert__icon {
+    color: hsl(var(--base));
+    background: linear-gradient(180deg, hsl(var(--base)/0.18), hsl(var(--base)/0.08));
+}
+
+.alert--primary {
+    border-color: hsl(var(--primary)/0.3);
+    background-color: hsl(var(--primaty));
+}
+
+.alert--primary::before {
+    background: hsl(var(--primary));
+}
+
+.alert--primary .alert__icon {
+    color: hsl(var(--primary));
+    background: linear-gradient(180deg, hsl(var(--primary)/0.18), hsl(var(--primary)/0.08));
+}
+
+.alert--success {
+    border-color: hsl(var(--success)/0.3);
+    background-color: hsl(var(--success)/0.1);
+}
+
+.alert--success::before {
+    background: hsl(var(--success));
+}
+
+.alert--success .alert__icon {
+    color: hsl(var(--success));
+    background: linear-gradient(180deg, hsl(var(--success)/0.18), hsl(var(--success)/0.08));
+}
+
+.alert--info {
+    border-color: hsl(var(--info)/0.3);
+    background-color: hsl(var(--info)/0.1);
+}
+
+.alert--info::before {
+    background: hsl(var(--info));
+}
+
+.alert--info .alert__icon {
+    color: hsl(var(--info));
+    background: linear-gradient(180deg, hsl(var(--info)/0.18), hsl(var(--info)/0.08));
+}
+
+.alert--danger {
+    border-color: hsl(var(--danger)/0.3);
+}
+
+.alert--danger::before {
+    background: hsl(var(--danger));
+}
+
+.alert--danger .alert__icon {
+    color: hsl(var(--danger));
+    background: linear-gradient(180deg, hsl(var(--danger)/0.18), hsl(var(--danger)/0.08));
+}
+
+.alert--warning {
+    border-color: hsl(var(--warning)/0.35);
+}
+
+.alert--warning::before {
+    background: linear-gradient(180deg, hsl(var(--warning)), hsl(var(--base)));
+}
+
+.alert--warning .alert__icon {
+    color: hsl(var(--warning));
+    background: linear-gradient(180deg, hsl(var(--warning)/0.2), hsl(var(--warning)/0.08));
+}
+
+.alert--secondary {
+    border-color: hsl(var(--secondary)/0.3);
+}
+
+.alert--secondary::before {
+    background: hsl(var(--secondary));
+}
+
+.alert--secondary .alert__icon {
+    color: hsl(var(--secondary));
+    background: linear-gradient(180deg, hsl(var(--secondary)/0.18), hsl(var(--secondary)/0.08));
+}
+
+/* ====================================== Alert Css End =============================== */

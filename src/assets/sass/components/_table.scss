@@ -1,0 +1,280 @@
+/* ================================= Table Css Start =========================== */
+.table {
+    margin: 0;
+    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+}
+
+.table thead tr th {
+    background-color: hsl(var(--white));
+    text-align: center;
+    padding: 15px 20px;
+    color: hsl(var(--white));
+    font-family: var(--heading-font);
+    font-weight: 600;
+    border-bottom: 0;
+    max-width: 170px;
+    font-size: 16px;
+    background-color: hsl(var(--base));
+}
+
+.table thead tr th:not(:first-child) {
+    border-left: 0;
+}
+
+.table thead tr th:first-child {
+    text-align: left;
+    border-radius: 16px 0 0 0;
+}
+
+.table thead tr th:last-child {
+    border-radius: 0 16px 0 0;
+    text-align: right;
+}
+
+.table tbody {
+    border: 0 !important;
+    background-color: hsl(var(--white));
+}
+
+.table tbody tr:last-child {
+    border-bottom: 0;
+}
+
+.table tbody tr:last-child td:first-child {
+    border-radius: 0px 0 0 16px;
+}
+
+.table tbody tr:last-child td:last-child {
+    border-radius: 0 0px 16px 0;
+}
+
+.table tbody tr td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 15px;
+    border-width: 1px;
+    border: 0;
+    font-family: var(--heading-font);
+    color: hsl(var(--black)/0.7);
+    font-weight: 500;
+    max-width: 170px;
+    font-size: 15px;
+    border-bottom: 1px dashed hsl(var(--base)/0.2);
+    background-color: hsl(var(--base)/0.1);
+}
+
+.table tbody tr td::before {
+    content: attr(data-label);
+    font-family: var(--heading-font);
+    font-size: 15px;
+    color: hsl(var(--black));
+    font-weight: 500;
+    display: none;
+    width: 45% !important;
+    text-align: left;
+}
+
+.table tbody tr td:first-child {
+    text-align: left;
+    font-size: 14px;
+}
+
+.table tbody tr td:last-child {
+    text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+    .table--responsive--sm thead {
+        display: none;
+    }
+
+    .table--responsive--sm tbody tr {
+        display: block;
+    }
+
+    .table--responsive--sm tbody tr:last-child td {
+        border-bottom: 0;
+    }
+
+    .table--responsive--sm tbody tr td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        text-align: right;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid hsl(var(--black)/0.8);
+        max-width: unset;
+    }
+
+    .table--responsive--sm tbody tr td:last-child {
+        border: none;
+    }
+
+    .table--responsive--sm tbody tr td:first-child {
+        text-align: right;
+        border-left: 0;
+    }
+
+    .table--responsive--sm tbody tr td::before {
+        display: block;
+        font-size: 14px;
+        color: hsl(var(--black)/0.7);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .table--responsive--sm tbody tr td {
+        border: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .table--responsive--md thead {
+        display: none;
+    }
+
+    .table--responsive--md tbody tr {
+        display: block;
+    }
+
+    .table--responsive--md tbody tr:nth-child(even) {
+        background-color: hsl(var(--black)/0.02);
+    }
+
+    .table--responsive--md tbody tr:last-child td {
+        border-bottom: 0;
+    }
+
+    .table--responsive--md tbody tr td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        text-align: right;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid hsl(var(--black)/0.08);
+        max-width: unset;
+    }
+
+    .table--responsive--md tbody tr td:last-child {
+        border: none;
+    }
+
+    .table--responsive--md tbody tr td:first-child {
+        text-align: right;
+        border-left: 0;
+    }
+
+    .table--responsive--md tbody tr td::before {
+        display: block;
+        font-size: 14px;
+        color: hsl(var(--black)/0.7);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .table--responsive--md tbody tr td {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .table--responsive--lg thead {
+        display: none;
+    }
+
+    .table--responsive--lg tbody tr {
+        display: block;
+    }
+
+    .table--responsive--lg tbody tr:nth-child(even) {
+        background-color: hsl(var(--black)/0.02);
+    }
+
+    .table--responsive--lg tbody tr td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        text-align: right;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid hsl(var(--black)/0.08);
+        max-width: unset;
+    }
+
+    .table--responsive--lg tbody tr td:last-child {
+        border: none;
+    }
+
+    .table--responsive--lg tbody tr td:first-child {
+        text-align: right;
+        border-left: 0;
+    }
+
+    .table--responsive--lg tbody tr td::before {
+        display: block;
+        font-size: 14px;
+        color: hsl(var(--black)/0.7);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .table--responsive--lg tbody tr td {
+        border: 0;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .table--responsive--xl thead {
+        display: none;
+    }
+
+    .table--responsive--xl tbody tr {
+        display: block;
+    }
+
+    .table--responsive--xl tbody tr:last-child td {
+        border-bottom: 0;
+    }
+
+    .table--responsive--xl tbody tr td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        text-align: right;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid hsl(var(--black)/0.08);
+        max-width: unset;
+    }
+
+    .table--responsive--xl tbody tr td:last-child {
+        border: none;
+    }
+
+    .table--responsive--xl tbody tr td:first-child {
+        text-align: right;
+        border-left: 0;
+    }
+
+    .table--responsive--xl tbody tr td::before {
+        display: block;
+        font-size: 14px;
+        color: hsl(var(--black)/0.7);
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .table--responsive--xl tbody tr td {
+        border: 0;
+    }
+}
+
+/* ================================= Table Css End =========================== */
